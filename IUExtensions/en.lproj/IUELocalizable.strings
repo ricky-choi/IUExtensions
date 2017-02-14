@@ -1,0 +1,13 @@
+/* 
+  IUELocalizable.strings
+  IUExtensions
+
+  Created by ricky on 2017. 2. 14..
+  Copyright © 2017년 Appcid. All rights reserved.
+*/
+
+"Dismiss" = "Dismiss";
+"Error" = "Error";
+"OK" = "OK";
+"Cancel" = "Cancel";
+"Settings" = "Settings";
