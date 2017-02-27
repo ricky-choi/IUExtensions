@@ -50,10 +50,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9CE5E8001E52818300B2FD4C /* UIExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CE5E8001E52818300B2FD4C /* IUExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IUExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CE5E8031E52818300B2FD4C /* IUExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IUExtensions.h; sourceTree = "<group>"; };
 		9CE5E8041E52818300B2FD4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9CE5E85E1E52962A00B2FD4C /* UIExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CE5E85E1E52962A00B2FD4C /* IUExtensionsMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IUExtensionsMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CE5E8671E5296E300B2FD4C /* AlertExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertExtension.swift; sourceTree = "<group>"; };
 		9CE5E8681E5296E300B2FD4C /* CellExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellExtension.swift; sourceTree = "<group>"; };
 		9CE5E8691E5296E300B2FD4C /* CoderExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoderExtension.swift; sourceTree = "<group>"; };
@@ -105,8 +105,8 @@
 		9CE5E8011E52818300B2FD4C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9CE5E8001E52818300B2FD4C /* UIExtensions.framework */,
-				9CE5E85E1E52962A00B2FD4C /* UIExtensions.framework */,
+				9CE5E8001E52818300B2FD4C /* IUExtensions.framework */,
+				9CE5E85E1E52962A00B2FD4C /* IUExtensionsMac.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -176,7 +176,7 @@
 			);
 			name = IUExtensions;
 			productName = IUExtensions;
-			productReference = 9CE5E8001E52818300B2FD4C /* UIExtensions.framework */;
+			productReference = 9CE5E8001E52818300B2FD4C /* IUExtensions.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		9CE5E85D1E52962A00B2FD4C /* IUExtensionsMac */ = {
@@ -194,7 +194,7 @@
 			);
 			name = IUExtensionsMac;
 			productName = IUExtensionsMac;
-			productReference = 9CE5E85E1E52962A00B2FD4C /* UIExtensions.framework */;
+			productReference = 9CE5E85E1E52962A00B2FD4C /* IUExtensionsMac.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -437,7 +437,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.appcid.IUExtensions;
-				PRODUCT_NAME = UIExtensions;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -458,7 +458,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.appcid.IUExtensions;
-				PRODUCT_NAME = UIExtensions;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -480,7 +480,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.appcid.IUExtensionsMac;
-				PRODUCT_NAME = UIExtensions;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -504,7 +504,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.appcid.IUExtensionsMac;
-				PRODUCT_NAME = UIExtensions;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -539,6 +539,7 @@
 				9CE5E8641E52962A00B2FD4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
