@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9CA1E7061E658D4B0025703D /* IUSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA1E7051E658D4B0025703D /* IUSegmentedControl.swift */; };
+		9CA1E7071E658D4B0025703D /* IUSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA1E7051E658D4B0025703D /* IUSegmentedControl.swift */; };
 		9CE5E8051E52818300B2FD4C /* IUExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CE5E8031E52818300B2FD4C /* IUExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9CE5E8661E52965500B2FD4C /* IUExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CE5E8031E52818300B2FD4C /* IUExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9CE5E8781E5296E300B2FD4C /* AlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE5E8671E5296E300B2FD4C /* AlertExtension.swift */; };
@@ -50,6 +52,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9CA1E7051E658D4B0025703D /* IUSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IUSegmentedControl.swift; sourceTree = "<group>"; };
 		9CE5E8001E52818300B2FD4C /* IUExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IUExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CE5E8031E52818300B2FD4C /* IUExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IUExtensions.h; sourceTree = "<group>"; };
 		9CE5E8041E52818300B2FD4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,6 +97,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9CA1E7031E658D1D0025703D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9CE5E8671E5296E300B2FD4C /* AlertExtension.swift */,
+				9CE5E8681E5296E300B2FD4C /* CellExtension.swift */,
+				9CE5E8691E5296E300B2FD4C /* CoderExtension.swift */,
+				9CE5E86A1E5296E300B2FD4C /* CollectionViewExtension.swift */,
+				9CE5E86B1E5296E300B2FD4C /* ColorExtension.swift */,
+				9CE5E86C1E5296E300B2FD4C /* DateExtension.swift */,
+				9CE5E86D1E5296E300B2FD4C /* DocumentExtension.swift */,
+				9CE5E86E1E5296E300B2FD4C /* FoundationExtension.swift */,
+				9CE5E86F1E5296E300B2FD4C /* GCDExtension.swift */,
+				9CE5E8701E5296E300B2FD4C /* ImageExtension.swift */,
+				9CE5E8711E5296E300B2FD4C /* ImageViewExtension.swift */,
+				9CE5E8721E5296E300B2FD4C /* JSON.swift */,
+				9CE5E8731E5296E300B2FD4C /* LayoutExtension.swift */,
+				9CE5E8741E5296E300B2FD4C /* PhotosExtension.swift */,
+				9CE5E8751E5296E300B2FD4C /* ScrollViewExtension.swift */,
+				9CE5E8761E5296E300B2FD4C /* StringExtension.swift */,
+				9CE5E8771E5296E300B2FD4C /* ViewControllerExtension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		9CA1E7041E658D2D0025703D /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				9CA1E7051E658D4B0025703D /* IUSegmentedControl.swift */,
+			);
+			name = Controls;
+			sourceTree = "<group>";
+		};
 		9CE5E7F61E52818300B2FD4C = {
 			isa = PBXGroup;
 			children = (
@@ -115,23 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				9CE5E8031E52818300B2FD4C /* IUExtensions.h */,
-				9CE5E8671E5296E300B2FD4C /* AlertExtension.swift */,
-				9CE5E8681E5296E300B2FD4C /* CellExtension.swift */,
-				9CE5E8691E5296E300B2FD4C /* CoderExtension.swift */,
-				9CE5E86A1E5296E300B2FD4C /* CollectionViewExtension.swift */,
-				9CE5E86B1E5296E300B2FD4C /* ColorExtension.swift */,
-				9CE5E86C1E5296E300B2FD4C /* DateExtension.swift */,
-				9CE5E86D1E5296E300B2FD4C /* DocumentExtension.swift */,
-				9CE5E86E1E5296E300B2FD4C /* FoundationExtension.swift */,
-				9CE5E86F1E5296E300B2FD4C /* GCDExtension.swift */,
-				9CE5E8701E5296E300B2FD4C /* ImageExtension.swift */,
-				9CE5E8711E5296E300B2FD4C /* ImageViewExtension.swift */,
-				9CE5E8721E5296E300B2FD4C /* JSON.swift */,
-				9CE5E8731E5296E300B2FD4C /* LayoutExtension.swift */,
-				9CE5E8741E5296E300B2FD4C /* PhotosExtension.swift */,
-				9CE5E8751E5296E300B2FD4C /* ScrollViewExtension.swift */,
-				9CE5E8761E5296E300B2FD4C /* StringExtension.swift */,
-				9CE5E8771E5296E300B2FD4C /* ViewControllerExtension.swift */,
+				9CA1E7031E658D1D0025703D /* Extensions */,
+				9CA1E7041E658D2D0025703D /* Controls */,
 				9CE5E8A11E52970900B2FD4C /* IUELocalizable.swift */,
 				9CE5E8A01E5296FE00B2FD4C /* IUELocalizable.strings */,
 				9CE5E8041E52818300B2FD4C /* Info.plist */,
@@ -263,6 +283,7 @@
 			files = (
 				9CE5E8861E5296E300B2FD4C /* FoundationExtension.swift in Sources */,
 				9CE5E87E1E5296E300B2FD4C /* CollectionViewExtension.swift in Sources */,
+				9CA1E7061E658D4B0025703D /* IUSegmentedControl.swift in Sources */,
 				9CE5E8901E5296E300B2FD4C /* LayoutExtension.swift in Sources */,
 				9CE5E8821E5296E300B2FD4C /* DateExtension.swift in Sources */,
 				9CE5E8961E5296E300B2FD4C /* StringExtension.swift in Sources */,
@@ -288,6 +309,7 @@
 			files = (
 				9CE5E8871E5296E300B2FD4C /* FoundationExtension.swift in Sources */,
 				9CE5E87F1E5296E300B2FD4C /* CollectionViewExtension.swift in Sources */,
+				9CA1E7071E658D4B0025703D /* IUSegmentedControl.swift in Sources */,
 				9CE5E8911E5296E300B2FD4C /* LayoutExtension.swift in Sources */,
 				9CE5E8831E5296E300B2FD4C /* DateExtension.swift in Sources */,
 				9CE5E8971E5296E300B2FD4C /* StringExtension.swift in Sources */,
