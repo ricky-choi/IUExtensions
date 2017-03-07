@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C9BE0DD1E6F701300D5B113 /* IUButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9BE0DC1E6F701300D5B113 /* IUButton.swift */; };
+		9C9BE0DE1E6F701300D5B113 /* IUButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9BE0DC1E6F701300D5B113 /* IUButton.swift */; };
+		9C9BE0E01E6F702D00D5B113 /* IUControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9BE0DF1E6F702D00D5B113 /* IUControl.swift */; };
+		9C9BE0E11E6F702D00D5B113 /* IUControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9BE0DF1E6F702D00D5B113 /* IUControl.swift */; };
 		9CA1E7061E658D4B0025703D /* IUSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA1E7051E658D4B0025703D /* IUSegmentedControl.swift */; };
 		9CA1E7071E658D4B0025703D /* IUSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA1E7051E658D4B0025703D /* IUSegmentedControl.swift */; };
 		9CE5E8051E52818300B2FD4C /* IUExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CE5E8031E52818300B2FD4C /* IUExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -52,6 +56,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C9BE0DC1E6F701300D5B113 /* IUButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IUButton.swift; sourceTree = "<group>"; };
+		9C9BE0DF1E6F702D00D5B113 /* IUControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IUControl.swift; sourceTree = "<group>"; };
 		9CA1E7051E658D4B0025703D /* IUSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IUSegmentedControl.swift; sourceTree = "<group>"; };
 		9CE5E8001E52818300B2FD4C /* IUExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IUExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CE5E8031E52818300B2FD4C /* IUExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IUExtensions.h; sourceTree = "<group>"; };
@@ -125,6 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				9CA1E7051E658D4B0025703D /* IUSegmentedControl.swift */,
+				9C9BE0DC1E6F701300D5B113 /* IUButton.swift */,
+				9C9BE0DF1E6F702D00D5B113 /* IUControl.swift */,
 			);
 			name = Controls;
 			sourceTree = "<group>";
@@ -299,7 +307,9 @@
 				9CE5E8841E5296E300B2FD4C /* DocumentExtension.swift in Sources */,
 				9CE5E8981E5296E300B2FD4C /* ViewControllerExtension.swift in Sources */,
 				9CE5E87A1E5296E300B2FD4C /* CellExtension.swift in Sources */,
+				9C9BE0E01E6F702D00D5B113 /* IUControl.swift in Sources */,
 				9CE5E8801E5296E300B2FD4C /* ColorExtension.swift in Sources */,
+				9C9BE0DD1E6F701300D5B113 /* IUButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,7 +335,9 @@
 				9CE5E8851E5296E300B2FD4C /* DocumentExtension.swift in Sources */,
 				9CE5E8991E5296E300B2FD4C /* ViewControllerExtension.swift in Sources */,
 				9CE5E87B1E5296E300B2FD4C /* CellExtension.swift in Sources */,
+				9C9BE0E11E6F702D00D5B113 /* IUControl.swift in Sources */,
 				9CE5E8811E5296E300B2FD4C /* ColorExtension.swift in Sources */,
+				9C9BE0DE1E6F701300D5B113 /* IUButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

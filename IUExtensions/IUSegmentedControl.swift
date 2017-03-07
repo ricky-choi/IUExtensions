@@ -8,69 +8,15 @@
 
 import Foundation
 
-
 #if os(iOS)
     import UIKit
-    public typealias Control = UIControl
-    public typealias ControlState = UIControlState
-    public typealias Image = UIImage
-    public typealias Button = UIButton
 #elseif os(OSX)
-    public struct AUIControlState : OptionSet, Hashable {
-        let _rawValue: UInt
-        
-        public var rawValue: UInt {
-            return _rawValue
-        }
-        
-        public init(rawValue: UInt) {
-            self._rawValue = rawValue
-        }
-        
-        public var hashValue: Int {
-            return Int(_rawValue)
-        }
-        
-        public static let normal: AUIControlState = AUIControlState(rawValue: 0)
-        
-        public static let highlighted: AUIControlState = AUIControlState(rawValue: 0b1) // used when UIControl isHighlighted is set
-        
-        public static let disabled: AUIControlState = AUIControlState(rawValue: 0b10)
-        
-        public static let selected: AUIControlState = AUIControlState(rawValue: 0b100) // flag usable by app (see below)
-        
-        public static let focused: AUIControlState = AUIControlState(rawValue: 0b1000) // Applicable only when the screen supports focus
-        
-        public static let application: AUIControlState = AUIControlState(rawValue: 0b111111110000000000000000) // additional flags available for application use
-        
-        public static let reserved: AUIControlState = AUIControlState(rawValue: 0b11111111000000000000000000000000) // flags reserved for internal framework use
-        
-        
-        
-        
-        static let `default`: AUIControlState = .normal
-        
-        static let notDefaultStates: [AUIControlState] = [.highlighted, .disabled, .selected, .focused]
-        
-    }
-    
-    
     import Cocoa
-    public typealias Control = NSControl
-    public typealias ControlState = AUIControlState
-    public typealias Image = NSImage
-    public typealias Button = NSButton
 #endif
 
 
 public var IUSegmentedControlNoSegment: Int {
     return -1
-}
-
-public enum IUSegmentedControlItem {
-    case title(String)
-    case image(String, Image) // String is for accessibility
-    case titleAndImage(String, Image)
 }
 
 public enum IUSegmentedControlSelectionType {
@@ -81,11 +27,16 @@ public enum IUSegmentedControlSelectionType {
 }
 
 open class IUSegmentedControl: Control {
-    fileprivate var items: [IUSegmentedControlItem]
-    fileprivate var buttons = [Button]()
+    fileprivate var buttons: [IUButton]
     
-    public init(items: [IUSegmentedControlItem], target: AnyObject? = nil, action: Selector? = nil) {
-        self.items = items
+    convenience public init(items: [IUButtonItem], target: AnyObject? = nil, action: Selector? = nil) {
+        let buttons = IUSegmentedControl.readyButtons(items)
+        
+        self.init(buttons: buttons, target: target, action: action)
+    }
+    
+    public init(buttons: [IUButton], target: AnyObject? = nil, action: Selector? = nil) {
+        self.buttons = buttons
         
         super.init(frame: CGRect.zero)
         
@@ -93,8 +44,6 @@ open class IUSegmentedControl: Control {
             self.target = target
             self.action = action
         #endif
-        
-        readyButtons()
     }
     
     required public init?(coder: NSCoder) {
@@ -104,7 +53,7 @@ open class IUSegmentedControl: Control {
     open var selectionType: IUSegmentedControlSelectionType = .none
     
     open var numberOfSegments: Int {
-        return items.count
+        return buttons.count
     }
     
     open func setTitle(_ title: String?, forSegmentAt segment: Int) {
@@ -170,47 +119,11 @@ open class IUSegmentedControl: Control {
 }
 
 extension IUSegmentedControl {
-    fileprivate func readyButtons() {
-        guard numberOfSegments > 0 else {
-            return
+    static fileprivate func readyButtons(_ items: [IUButtonItem]) -> [IUButton] {
+        guard items.count > 0 else {
+            return []
         }
         
-        buttons = items.map({ (item) -> Button in
-            let button = Button()
-            
-            var title: String?
-            var accessibilityLabel: String?
-            var image: Image?
-            
-            switch item {
-            case .title(let itemTitle):
-                title = itemTitle
-                accessibilityLabel = itemTitle
-            case .image(let itemAccessibilityLabel, let itemImage):
-                accessibilityLabel = itemAccessibilityLabel
-                image = itemImage
-            case .titleAndImage(let itemTitle, let itemImage):
-                title = itemTitle
-                accessibilityLabel = itemTitle
-                image = itemImage
-            }
-            
-            #if os(iOS)
-                if let title = title {
-                    button.setTitle(title, for: .normal)
-                }
-                
-                if let image = image {
-                    button.setImage(image, for: .normal)
-                }
-                
-                button.accessibilityLabel = accessibilityLabel
-            #elseif os(OSX)
-                
-            #endif
-            
-            
-            return button
-        })
+        return items.map{ IUButton(item: $0) }
     }
 }
