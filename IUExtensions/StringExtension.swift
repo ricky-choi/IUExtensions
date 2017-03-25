@@ -48,3 +48,17 @@ extension String {
         return substring(to: secondIndex).uppercased() + substring(from: secondIndex)
     }
 }
+
+extension NSAttributedString {
+    public func addingAttribute(_ name: String, value: Any, range: NSRange) -> NSAttributedString {
+        let mutable = mutableCopy() as! NSMutableAttributedString
+        mutable.addAttribute(name, value: value, range: range)
+        return mutable.copy() as! NSAttributedString
+    }
+    
+    public func addingAttributes(_ attrs: [String : Any], range: NSRange) -> NSAttributedString {
+        let mutable = mutableCopy() as! NSMutableAttributedString
+        mutable.addAttributes(attrs, range: range)
+        return mutable.copy() as! NSAttributedString
+    }
+}
