@@ -10,16 +10,16 @@
     import UIKit
     public typealias View = UIView
     public typealias LayoutPriority = UILayoutPriority
-    public let LayoutPriorityRequired: LayoutPriority = UILayoutPriorityRequired
-    public let LayoutPriorityDefaultHigh: LayoutPriority = UILayoutPriorityDefaultHigh
-    public let LayoutPriorityDefaultLow: LayoutPriority = UILayoutPriorityDefaultLow
+    public let LayoutPriorityRequired: LayoutPriority = UILayoutPriority.required
+    public let LayoutPriorityDefaultHigh: LayoutPriority = UILayoutPriority.defaultHigh
+    public let LayoutPriorityDefaultLow: LayoutPriority = UILayoutPriority.defaultLow
 #elseif os(OSX)
     import AppKit
     public typealias View = NSView
-    public typealias LayoutPriority = NSLayoutPriority
-    public let LayoutPriorityRequired: LayoutPriority = NSLayoutPriorityRequired
-    public let LayoutPriorityDefaultHigh: LayoutPriority = NSLayoutPriorityDefaultHigh
-    public let LayoutPriorityDefaultLow: LayoutPriority = NSLayoutPriorityDefaultLow
+    public typealias LayoutPriority = NSLayoutConstraint.Priority
+    public let LayoutPriorityRequired: LayoutPriority = NSLayoutConstraint.Priority.required
+    public let LayoutPriorityDefaultHigh: LayoutPriority = NSLayoutConstraint.Priority.defaultHigh
+    public let LayoutPriorityDefaultLow: LayoutPriority = NSLayoutConstraint.Priority.defaultLow
 #endif
 
 

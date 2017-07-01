@@ -40,7 +40,7 @@ extension Color {
             hex = hex.substring(from: hex.index(after: hex.startIndex))
         }
         
-        let length = hex.length()
+        let length = hex.count
         
         var hexNumber = UInt32()
         Scanner(string: hex).scanHexInt32(&hexNumber)
@@ -77,7 +77,7 @@ extension Color {
         var color = self
         
         #if os(OSX)
-            color = self.usingColorSpaceName(NSCalibratedRGBColorSpace)!
+            color = self.usingColorSpaceName(NSColorSpaceName.calibratedRGB)!
         #endif
         
         return color

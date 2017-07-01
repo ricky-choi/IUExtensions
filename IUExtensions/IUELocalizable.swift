@@ -8,7 +8,7 @@
 
 import Foundation
 
-class IUELocalizable {
+public class IUELocalizable {
     static var languageBundle: Bundle = {
         let frameworkBundle = Bundle(for: IUELocalizable.self)
         guard let resourceBundlePath = frameworkBundle.path(forResource: "UIExtensions", ofType: "bundle"), let resourceBundle = Bundle(path: resourceBundlePath) else {
@@ -29,7 +29,7 @@ class IUELocalizable {
         return Bundle.main
     }()
     
-    static func string(for key: String) -> String {
+    public static func string(for key: String) -> String {
         return languageBundle.localizedString(forKey: key, value: nil, table: "IUELocalizable")
     }
 }

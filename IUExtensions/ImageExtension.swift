@@ -17,7 +17,7 @@
             copy.lockFocus()
             
             color.set()
-            NSRectFillUsingOperation(NSRect(origin: CGPoint(x: 0, y: 0), size: size), .sourceAtop)
+            NSRect(origin: CGPoint(x: 0, y: 0), size: size).fill(using: .sourceAtop)
             
             copy.unlockFocus()
             

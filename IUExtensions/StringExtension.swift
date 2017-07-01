@@ -13,16 +13,6 @@ extension String {
         return trimmingCharacters(in: .whitespacesAndNewlines)
     }
     
-    public func length() -> Int {
-        var count = 0
-        
-        enumerateSubstrings(in: startIndex ..< endIndex, options: .byComposedCharacterSequences) { _ in
-            count = count + 1
-        }
-        
-        return count
-    }
-    
     public func filter(predicate: (Character) -> Bool) -> String {
         var res = String()
         for c in self.characters {
@@ -39,7 +29,7 @@ extension String {
     }
     
     public func uppercasedFirstCharacterOnly() -> String {
-        guard length() > 1 else {
+        guard count > 1 else {
             return uppercased()
         }
         
@@ -50,13 +40,13 @@ extension String {
 }
 
 extension NSAttributedString {
-    public func addingAttribute(_ name: String, value: Any, range: NSRange) -> NSAttributedString {
+    public func addingAttribute(_ name: NSAttributedStringKey, value: Any, range: NSRange) -> NSAttributedString {
         let mutable = mutableCopy() as! NSMutableAttributedString
         mutable.addAttribute(name, value: value, range: range)
         return mutable.copy() as! NSAttributedString
     }
     
-    public func addingAttributes(_ attrs: [String : Any], range: NSRange) -> NSAttributedString {
+    public func addingAttributes(_ attrs: [NSAttributedStringKey : Any], range: NSRange) -> NSAttributedString {
         let mutable = mutableCopy() as! NSMutableAttributedString
         mutable.addAttributes(attrs, range: range)
         return mutable.copy() as! NSAttributedString
