@@ -85,6 +85,23 @@ extension View {
         return (leadingConstraint, topConstraint, trailingConstraint, bottomConstraint)
     }
     
+    @available(iOS 11.0, *)
+    @discardableResult
+    public func fillToSafeSuperview(_ margin: ACDMargin = ACDMarginZero) -> MarginConstraints {
+        assert(superview != nil)
+        
+        translatesAutoresizingMaskIntoConstraints = false
+        
+        let leadingConstraint = leadingAnchor.constraint(equalTo: superview!.safeAreaLayoutGuide.leadingAnchor, constant: margin.leading)
+        let trailingConstraint = trailingAnchor.constraint(equalTo: superview!.safeAreaLayoutGuide.trailingAnchor, constant: margin.trailing)
+        let topConstraint = topAnchor.constraint(equalTo: superview!.safeAreaLayoutGuide.topAnchor, constant: margin.top)
+        let bottomConstraint = bottomAnchor.constraint(equalTo: superview!.safeAreaLayoutGuide.bottomAnchor, constant: margin.bottom)
+        
+        NSLayoutConstraint.activate([leadingConstraint, topConstraint, trailingConstraint, bottomConstraint])
+        
+        return (leadingConstraint, topConstraint, trailingConstraint, bottomConstraint)
+    }
+    
     public func fixSize(_ size: CGSize) {
         translatesAutoresizingMaskIntoConstraints = false
         
