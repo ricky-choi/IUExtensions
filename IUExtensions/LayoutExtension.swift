@@ -85,6 +85,7 @@ extension View {
         return (leadingConstraint, topConstraint, trailingConstraint, bottomConstraint)
     }
     
+#if os(iOS) || os(tvOS)
     @available(iOS 11.0, *)
     @discardableResult
     public func fillToSafeSuperview(_ margin: ACDMargin = ACDMarginZero) -> MarginConstraints {
@@ -101,6 +102,7 @@ extension View {
         
         return (leadingConstraint, topConstraint, trailingConstraint, bottomConstraint)
     }
+#endif
     
     public func fixSize(_ size: CGSize) {
         translatesAutoresizingMaskIntoConstraints = false
