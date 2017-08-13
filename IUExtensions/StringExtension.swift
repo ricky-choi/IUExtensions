@@ -35,7 +35,7 @@ extension String {
         
         let secondIndex = index(after: startIndex)
         
-        return substring(to: secondIndex).uppercased() + substring(from: secondIndex)
+        return self[..<secondIndex].uppercased() + self[secondIndex...]
     }
 }
 

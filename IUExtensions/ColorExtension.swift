@@ -37,7 +37,7 @@ extension Color {
     public convenience init(hexString: String, alpha: CGFloat? = nil) {
         var hex = hexString
         if hex.hasPrefix("#") {
-            hex = hex.substring(from: hex.index(after: hex.startIndex))
+            hex = String(hex[hex.index(after: hex.startIndex)...])
         }
         
         let length = hex.count

@@ -47,7 +47,19 @@
 		9CE5E89E1E5296FE00B2FD4C /* IUELocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9CE5E8A01E5296FE00B2FD4C /* IUELocalizable.strings */; };
 		9CE5E8A21E52970900B2FD4C /* IUELocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE5E8A11E52970900B2FD4C /* IUELocalizable.swift */; };
 		9CE5E8A31E52970900B2FD4C /* IUELocalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE5E8A11E52970900B2FD4C /* IUELocalizable.swift */; };
+		AE487AA21F40BEF3003F4D96 /* IUExtensionsMacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE487AA11F40BEF3003F4D96 /* IUExtensionsMacTests.swift */; };
+		AE487AA41F40BEF3003F4D96 /* IUExtensionsMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CE5E85E1E52962A00B2FD4C /* IUExtensionsMac.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AE487AA51F40BEF3003F4D96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CE5E7F71E52818300B2FD4C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9CE5E85D1E52962A00B2FD4C;
+			remoteInfo = IUExtensionsMac;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		9CE5E8001E52818300B2FD4C /* IUExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IUExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +86,9 @@
 		9CE5E89F1E5296FE00B2FD4C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/IUELocalizable.strings; sourceTree = "<group>"; };
 		9CE5E8A11E52970900B2FD4C /* IUELocalizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IUELocalizable.swift; sourceTree = "<group>"; };
 		9CE5E8A41E52972B00B2FD4C /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/IUELocalizable.strings; sourceTree = "<group>"; };
+		AE487A9F1F40BEF3003F4D96 /* IUExtensionsMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IUExtensionsMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE487AA11F40BEF3003F4D96 /* IUExtensionsMacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IUExtensionsMacTests.swift; sourceTree = "<group>"; };
+		AE487AA31F40BEF3003F4D96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +103,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE487A9C1F40BEF3003F4D96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE487AA41F40BEF3003F4D96 /* IUExtensionsMac.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				9CE5E8021E52818300B2FD4C /* IUExtensions */,
+				AE487AA01F40BEF3003F4D96 /* IUExtensionsMacTests */,
 				9CE5E8011E52818300B2FD4C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -131,6 +155,7 @@
 			children = (
 				9CE5E8001E52818300B2FD4C /* IUExtensions.framework */,
 				9CE5E85E1E52962A00B2FD4C /* IUExtensionsMac.framework */,
+				AE487A9F1F40BEF3003F4D96 /* IUExtensionsMacTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,6 +170,15 @@
 				9CE5E8041E52818300B2FD4C /* Info.plist */,
 			);
 			path = IUExtensions;
+			sourceTree = "<group>";
+		};
+		AE487AA01F40BEF3003F4D96 /* IUExtensionsMacTests */ = {
+			isa = PBXGroup;
+			children = (
+				AE487AA11F40BEF3003F4D96 /* IUExtensionsMacTests.swift */,
+				AE487AA31F40BEF3003F4D96 /* Info.plist */,
+			);
+			path = IUExtensionsMacTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,12 +239,31 @@
 			productReference = 9CE5E85E1E52962A00B2FD4C /* IUExtensionsMac.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		AE487A9E1F40BEF3003F4D96 /* IUExtensionsMacTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE487AA91F40BEF3003F4D96 /* Build configuration list for PBXNativeTarget "IUExtensionsMacTests" */;
+			buildPhases = (
+				AE487A9B1F40BEF3003F4D96 /* Sources */,
+				AE487A9C1F40BEF3003F4D96 /* Frameworks */,
+				AE487A9D1F40BEF3003F4D96 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE487AA61F40BEF3003F4D96 /* PBXTargetDependency */,
+			);
+			name = IUExtensionsMacTests;
+			productName = IUExtensionsMacTests;
+			productReference = AE487A9F1F40BEF3003F4D96 /* IUExtensionsMacTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		9CE5E7F71E52818300B2FD4C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Appcid;
 				TargetAttributes = {
@@ -223,6 +276,9 @@
 						CreatedOnToolsVersion = 8.2.1;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
+					};
+					AE487A9E1F40BEF3003F4D96 = {
+						CreatedOnToolsVersion = 9.0;
 					};
 				};
 			};
@@ -241,6 +297,7 @@
 			targets = (
 				9CE5E7FF1E52818300B2FD4C /* IUExtensions */,
 				9CE5E85D1E52962A00B2FD4C /* IUExtensionsMac */,
+				AE487A9E1F40BEF3003F4D96 /* IUExtensionsMacTests */,
 			);
 		};
 /* End PBXProject section */
@@ -259,6 +316,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CE5E89E1E5296FE00B2FD4C /* IUELocalizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE487A9D1F40BEF3003F4D96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,7 +379,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AE487A9B1F40BEF3003F4D96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE487AA21F40BEF3003F4D96 /* IUExtensionsMacTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AE487AA61F40BEF3003F4D96 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9CE5E85D1E52962A00B2FD4C /* IUExtensionsMac */;
+			targetProxy = AE487AA51F40BEF3003F4D96 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9CE5E8A01E5296FE00B2FD4C /* IUELocalizable.strings */ = {
@@ -523,6 +603,56 @@
 			};
 			name = Release;
 		};
+		AE487AA71F40BEF3003F4D96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = IUExtensionsMacTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appcid.IUExtensionsMacTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		AE487AA81F40BEF3003F4D96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = IUExtensionsMacTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appcid.IUExtensionsMacTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -549,6 +679,15 @@
 			buildConfigurations = (
 				9CE5E8631E52962A00B2FD4C /* Debug */,
 				9CE5E8641E52962A00B2FD4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE487AA91F40BEF3003F4D96 /* Build configuration list for PBXNativeTarget "IUExtensionsMacTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE487AA71F40BEF3003F4D96 /* Debug */,
+				AE487AA81F40BEF3003F4D96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
