@@ -11,7 +11,7 @@ import Foundation
 public class IUELocalizable {
     static var languageBundle: Bundle = {
         let frameworkBundle = Bundle(for: IUELocalizable.self)
-        guard let resourceBundlePath = frameworkBundle.path(forResource: "UIExtensions", ofType: "bundle"), let resourceBundle = Bundle(path: resourceBundlePath) else {
+        guard let resourceBundlePath = frameworkBundle.path(forResource: "IUExtensions", ofType: "bundle"), let resourceBundle = Bundle(path: resourceBundlePath) else {
             return Bundle.main
         }
         
