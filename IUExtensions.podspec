@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                        = "IUExtensions"
-  s.version                     = "0.1.2"
+  s.version                     = "0.2.0"
   s.summary                     = "Extensions for cocoa programming"
   s.homepage                    = "https://github.com/Ricky-Choi/IUExtensions"
   s.license                     = "MIT"
