@@ -15,7 +15,7 @@ extension String {
     
     public func filter(predicate: (Character) -> Bool) -> String {
         var res = String()
-        for c in self.characters {
+        for c in self {
             if (predicate(c)) {
                 res.append(c)
             }
