@@ -11,7 +11,7 @@ import Foundation
 #if os(iOS)
     import UIKit
     
-    extension UIDocumentState: CustomStringConvertible {
+    extension UIDocument.State: CustomStringConvertible {
         public var description: String {
             var statusString = ""
             

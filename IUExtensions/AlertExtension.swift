@@ -55,7 +55,7 @@ extension UIViewController {
         alert.addAction(UIAlertAction(title: cancelTitle, style: .cancel, handler: cancelHandler))
         alert.addAction(UIAlertAction(title: IUELocalizable.string(for: "Settings"), style: .default, handler: { _ in
             // go to setting
-            let settingsURL = URL(string: UIApplicationOpenSettingsURLString)!
+            let settingsURL = URL(string: UIApplication.openSettingsURLString)!
             actionHandler?(settingsURL)
         }))
         

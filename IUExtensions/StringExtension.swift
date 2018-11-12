@@ -40,13 +40,13 @@ extension String {
 }
 
 extension NSAttributedString {
-    public func addingAttribute(_ name: NSAttributedStringKey, value: Any, range: NSRange) -> NSAttributedString {
+    public func addingAttribute(_ name: NSAttributedString.Key, value: Any, range: NSRange) -> NSAttributedString {
         let mutable = mutableCopy() as! NSMutableAttributedString
         mutable.addAttribute(name, value: value, range: range)
         return mutable.copy() as! NSAttributedString
     }
     
-    public func addingAttributes(_ attrs: [NSAttributedStringKey : Any], range: NSRange) -> NSAttributedString {
+    public func addingAttributes(_ attrs: [NSAttributedString.Key : Any], range: NSRange) -> NSAttributedString {
         let mutable = mutableCopy() as! NSMutableAttributedString
         mutable.addAttributes(attrs, range: range)
         return mutable.copy() as! NSAttributedString
